@@ -1,0 +1,48 @@
+@import "_vars";
+@import "./vendor/reset";
+
+// font-family: 'Inter', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Roboto Slab', serif;
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    line-height: 111%;
+    color: $black;
+    background-color: $primary;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+.d-none {
+    display: none;
+}
+
+/* Blocks */
+
+
