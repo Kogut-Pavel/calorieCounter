@@ -12,6 +12,10 @@
         <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
         <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
         
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        
         <!-- Useful meta tags -->
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,7 +29,108 @@
 
         <!-- Main -->
         <main class="main">
+            <section class="app">
+                <div class="container">
+                    <div class="app__wrapper">
+                        <h1 class="app__main-title">Счётчик калорий</h1>
             
+                        <div class="app__inner">
+                            <h2 class="app__title">Пол</h2>
+                            <div class="app__gender">
+                                <button class="app__button active">Мужчина</button>
+                                <button class="app__button">Женщина</button>
+                            </div>
+            
+                            <ul class="app__anthropometry">
+                                <li>
+                                    <label for="age">
+                                        Возраст <span>лет</span>
+                                    </label>
+                                    <input type="text" name="age" id="age" maxlength="3" placeholder="0" required>
+                                </li>
+                                <li>
+                                    <label for="height">
+                                        Рост <span>см</span>
+                                    </label>
+                                    <input type="text" name="height" id="height" maxlength="3" placeholder="0" required>
+                                </li>
+                                <li>
+                                    <label for="weight">
+                                        Вес <span>кг</span>
+                                    </label>
+                                    <input type="text" name="weight" id="weight" maxlength="3" placeholder="0" required>
+                                </li>
+                            </ul>
+            
+                            <h2 class="app__title">Физическая активность</h2>
+            
+                            <ul class="app__activity">
+                                <li>
+                                    <label for="min">
+                                        <input type="radio" name="levelActivity" id="min" checked>
+                                        Минимальная
+                                    </label>
+                                    <p>Сидячая работа и нет физических нагрузок</p>
+                                </li>
+                                <li>
+                                    <label for="low">
+                                        <input type="radio" name="levelActivity" id="low">
+                                        Низкая
+                                    </label>
+                                    <p>Редкие, нерегулярные тренировки, активность в быту</p>
+                                </li>
+                                <li>
+                                    <label for="medium">
+                                        <input type="radio" name="levelActivity" id="medium">
+                                        Средняя
+                                    </label>
+                                    <p>Тренировки 3-5 раз в неделю</p>
+                                </li>
+                                <li>
+                                    <label for="high">
+                                        <input type="radio" name="levelActivity" id="high">
+                                        Высокая
+                                    </label>
+                                    <p>Тренировки 6-7 раз в неделю</p>
+                                </li>
+                                <li>
+                                    <label for="veryHigh">
+                                        <input type="radio" name="levelActivity" id="veryHigh">
+                                        Очень высокая
+                                    </label>
+                                    <p>Больше 6 тренировок в неделю и физическая работа</p>
+                                </li>
+                            </ul>
+            
+                            <div class="app__footer">
+                                <button class="app__btn-result" disabled>Рассчитать</button>
+                                <button class="app__btn-clear" disabled>&#10006; Очистить поля и расчёт</button>
+                            </div>
+                            
+                        </div>
+            
+                        <div class="app__inner app__block-result show">
+                            
+                            <div class="app__title result-title">Ваша норма калорий</div>
+                            <ul>
+                                <li class="app__result-info app__weight-maintenance">
+                                    <div class="app__calories">3 760 ккал</div>
+                                    <p>поддержание веса</p>
+                                </li>
+                                <li class="app__result-info app__weight-loss">
+                                    <div class="app__calories">3 196 ккал</div>
+                                    <p>снижение веса</p>
+                                </li>
+                                <li class="app__result-info app__weight-gain">
+                                    <div class="app__calories">4 324 ккал</div>
+                                    <p>набор веса</p>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
 

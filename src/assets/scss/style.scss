@@ -1,10 +1,6 @@
 @import "_vars";
 @import "./vendor/reset";
 
-// font-family: 'Inter', sans-serif;
-// font-family: 'Open Sans', sans-serif;
-// font-family: 'Roboto Slab', serif;
-
 html {
     font-size: 62.5%;
 }
@@ -15,11 +11,11 @@ body {
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
     line-height: 111%;
     color: $black;
-    background-color: $primary;
+    background-color: #353F4B;
 }
 
 *,
@@ -45,4 +41,5 @@ a {
 
 /* Blocks */
 
+@import 'blocks/app';
 

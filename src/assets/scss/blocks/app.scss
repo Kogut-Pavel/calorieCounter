@@ -1,0 +1,187 @@
+.app {
+    &__main-title {
+        font-size: 4.8rem;
+        line-height: 130%;
+        color: $white;
+        font-weight: 700;
+    }
+    &__wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    &__inner {
+        max-width: 430px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 3rem 2rem;
+        background-color: $white;
+        border-radius: 1rem;
+    }
+    &__title {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 111%;
+    }
+    &__gender {
+        display: flex;
+        align-items: center;
+    }
+    &__button {
+        width: 50%;
+        padding: 1rem 2rem;
+        background: transparent;
+        border: 1px solid $primary;
+        transition: all .2s linear;
+        &:hover {
+            color: $primary;
+        }
+        &.active {
+            background-color: $primary;
+            color: $white;
+        }
+        &:first-child {
+            border-radius: .5rem 0 0 .5rem;
+        }
+        &:last-child {
+            border-radius: 0 .5rem .5rem 0;
+        }
+    }
+
+    &__anthropometry {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            label {
+                font-size: 2rem;
+                font-weight: 600;
+                span {
+                    font-size: 1.2rem;
+                    color: $secondary;
+                }
+            }
+            input {
+                align-self: flex-start;
+                text-align: center;
+                padding: .8rem;
+                width: 5.5rem;
+                height: 3.5rem;
+                border-radius: .5rem;
+                border-color: $primary;
+                font-weight: 600;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                left: 44%;
+            }
+        }
+    }
+
+    &__activity {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        li {
+            label {
+                display: flex;
+                align-items: center;
+                gap: .8rem;
+                padding-bottom: .5rem;
+                font-weight: 600;
+                font-size: 1.6rem;
+                cursor: pointer;
+                transition: all .2s linear;
+                &:hover {
+                    color: $primary;
+                }
+                input {
+                    cursor: pointer;
+                }
+            }
+            p {
+                padding-left: 2rem;
+                font-size: 1.4rem;
+                color: $secondary;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    &__btn-result {
+        padding: 1rem 2rem;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: $white;
+        background: $primary;
+        border: none;
+        border-radius: .5rem;
+        transition: all .2s linear;
+        &:disabled {
+            background-color: $secondary;
+        }
+    }
+    &__btn-clear {
+        color: rgb(179, 9, 9);
+        font-size: 1.6rem;
+        font-weight: 600;
+        border: none;
+        background: transparent;
+        transition: all .2s linear;
+        &:hover {
+            color: $primary;
+        }
+        &:disabled {
+            color: $secondary;
+        }
+    }
+
+    &__block-result {
+        opacity: 0;
+        transition: all .3s linear;
+        &.show {
+            opacity: 1;
+        }
+        .result-title {
+            color: $primary;
+            font-size: 2.4rem;
+        }
+
+        ul {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .app__result-info {
+            max-width: 9rem;
+            display: flex;
+            flex-direction: column;
+            gap: .2rem;
+            p {
+                color: $secondary;
+                font-weight: 600;
+            }
+        }
+
+        .app__calories {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    }
+
+}
