@@ -402,7 +402,7 @@ a {
 }
 
 .app__wrapper {
-    height: 100vh;
+    min-height: 100vh;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -421,7 +421,7 @@ a {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     padding: 3rem 2rem;
     background-color: #fff;
     border-radius: 1rem;
@@ -430,6 +430,7 @@ a {
 .app__title {
     font-size: 2rem;
     font-weight: 600;
+    line-height: 111%;
 }
 
 .app__gender {
@@ -444,7 +445,7 @@ a {
     padding: 1rem 2rem;
     background: transparent;
     border: 1px solid purple;
-    transition: all .2s ease-in;
+    transition: all .2s linear;
 }
 
 .app__button:hover {
@@ -491,7 +492,7 @@ a {
 
 .app__anthropometry li label span {
     font-size: 1.2rem;
-    color: gray;
+    color: #bebcbc;
 }
 
 .app__anthropometry li input {
@@ -509,4 +510,121 @@ a {
 .app__anthropometry li:nth-child(2) {
     position: absolute;
     left: 44%;
+}
+
+.app__activity {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.app__activity li label {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: .8rem;
+    padding-bottom: .5rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.app__activity li label:hover {
+    color: purple;
+}
+
+.app__activity li label input {
+    cursor: pointer;
+}
+
+.app__activity li p {
+    padding-left: 2rem;
+    font-size: 1.4rem;
+    color: #bebcbc;
+}
+
+.app__footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.app__btn-result {
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
+    background: purple;
+    border: none;
+    border-radius: .5rem;
+    transition: all .2s linear;
+}
+
+.app__btn-result:disabled {
+    background-color: #bebcbc;
+}
+
+.app__btn-clear {
+    color: #b30909;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    transition: all .2s linear;
+}
+
+.app__btn-clear:hover {
+    color: purple;
+}
+
+.app__btn-clear:disabled {
+    color: #bebcbc;
+}
+
+.app__block-result {
+    opacity: 0;
+    transition: all .3s linear;
+}
+
+.app__block-result.show {
+    opacity: 1;
+}
+
+.app__block-result .result-title {
+    color: purple;
+    font-size: 2.4rem;
+}
+
+.app__block-result ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.app__block-result .app__result-info {
+    max-width: 9rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.app__block-result .app__result-info p {
+    color: #bebcbc;
+    font-weight: 600;
+}
+
+.app__block-result .app__calories {
+    font-size: 1.5rem;
+    font-weight: 600;
 }

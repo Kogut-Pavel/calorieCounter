@@ -185,7 +185,7 @@ function jsWatch(cb) {
         .pipe(webpackStream({
           mode: "development",
           output: {
-            filename: 'app.js',
+            filename: 'app.min.js',
           }
         }))
         .pipe(dest(path.build.js))
