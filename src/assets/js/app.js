@@ -1,6 +1,7 @@
 "use strict";
 
 // ! Добавить проверку на ввод только цифр
+// ! Переименовать переменные на правильные с точки зрения англ. языка(Например: btnResult => resultBtn)
 
 // Блок с переменными
 
@@ -12,6 +13,10 @@ const anthropometryList = document.querySelectorAll('.app__anthropometry input')
 const activityList = document.querySelectorAll('.app__activity label');
 const btnResult = document.querySelector('.app__btn-result');
 const btnClear = document.querySelector('.app__btn-clear');
+const resultBlock = document.querySelector('.app__block-result');
+const weightMaintenance = document.querySelector('.app__weight-maintenance');
+const weightLoss = document.querySelector('.app__weight-loss');
+const weightGain = document.querySelector('.app__weight-gain');
 
 let genderValue = blockGender.querySelector('.active').value;
 let anthropometryObj = {};
@@ -80,8 +85,10 @@ const clearInputs = function() {
 
     setDisabledButton(btnClear);
     setDisabledButton(btnResult);
+    hideModal();
 }
 
+// Расчёт по формуле для получени количества каллорий для базовой потребности организма с учётом коэффициента нагрузок
 const getCalculations = function() {
     let normalResult = 0;
     if (genderValue === 'male') {
@@ -94,24 +101,40 @@ const getCalculations = function() {
 
 // Получить результат
 const getResult = function() {
-    console.log('Результат:');
-    console.log(`Пол: ${genderValue}`);
-    console.log(`Поддержание веса: ${getCalculations()} ккал`);
-    console.log(`Снижение веса: ${Math.round(getCalculations() * 0.85)} ккал`);
-    console.log(`Набор веса: ${Math.round(getCalculations() * 1.15)} ккал`)
+    const weightMaintenanceNum = getCalculations();
+    const weightLossNum = Math.round(weightMaintenanceNum * 0.85);
+    const weightGainNum = Math.round(weightMaintenanceNum * 1.15);
+    outputResult(weightMaintenanceNum, weightLossNum, weightGainNum);
+    showModal();
+}
+
+// Вывод результата
+const outputResult = function(maintenance, loss, gain) {
+    weightMaintenance.textContent = `${maintenance}`;
+    weightLoss.textContent = `${loss}`;
+    weightGain.textContent = `${gain}`;
+}
+
+// Показать окошко с результатом
+const showModal = function() {
+    resultBlock.classList.add('show');
+}
+
+const hideModal = function() {
+    resultBlock.classList.remove('show');
 }
 
 
 // Блок с навешиванием слушателей
 
 anthropometryList.forEach(item => {
-    item.addEventListener('change', () => {
+    item.addEventListener('input', () => {
         anthropometryObj = getAnthropometry();
     });
 });
 
 activityList.forEach(item => {
-    item.addEventListener('change', () => {
+    item.addEventListener('input', () => {
         activityRatio = getActivity(item);
     });
 });
