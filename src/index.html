@@ -6,8 +6,8 @@
             <div class="app__inner">
                 <h2 class="app__title">Пол</h2>
                 <div class="app__gender">
-                    <button class="app__button gender-btn gender-male active" value="1">Мужчина</button>
-                    <button class="app__button gender-btn gender-female" value="0.9">Женщина</button>
+                    <button class="app__button gender-btn gender-male active" value="male">Мужчина</button>
+                    <button class="app__button gender-btn gender-female" value="female">Женщина</button>
                 </div>
 
                 <ul class="app__anthropometry">
@@ -36,35 +36,35 @@
                 <ul class="app__activity">
                     <li>
                         <label for="min">
-                            <input type="radio" name="levelActivity" id="min" checked>
+                            <input type="radio" name="levelActivity" id="min" value="1.2" class="active" checked>
                             Минимальная
                         </label>
                         <p>Сидячая работа и нет физических нагрузок</p>
                     </li>
                     <li>
                         <label for="low">
-                            <input type="radio" name="levelActivity" id="low">
+                            <input type="radio" name="levelActivity" id="low" value="1.37">
                             Низкая
                         </label>
                         <p>Редкие, нерегулярные тренировки, активность в быту</p>
                     </li>
                     <li>
                         <label for="medium">
-                            <input type="radio" name="levelActivity" id="medium">
+                            <input type="radio" name="levelActivity" id="medium" value="1.55">
                             Средняя
                         </label>
                         <p>Тренировки 3-5 раз в неделю</p>
                     </li>
                     <li>
                         <label for="high">
-                            <input type="radio" name="levelActivity" id="high">
+                            <input type="radio" name="levelActivity" id="high" value="1.7">
                             Высокая
                         </label>
                         <p>Тренировки 6-7 раз в неделю</p>
                     </li>
                     <li>
                         <label for="veryHigh">
-                            <input type="radio" name="levelActivity" id="veryHigh">
+                            <input type="radio" name="levelActivity" id="veryHigh" value="1.9">
                             Очень высокая
                         </label>
                         <p>Больше 6 тренировок в неделю и физическая работа</p>
